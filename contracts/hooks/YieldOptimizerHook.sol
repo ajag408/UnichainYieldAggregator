@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import {BaseHook} from "../v4-periphery/contracts/BaseHook.sol";
-import {IPoolManager} from "../v4-core/contracts/interfaces/IPoolManager.sol";
-import {PoolKey} from "../v4-core/contracts/types/PoolKey.sol";
-import {BalanceDelta} from "../v4-core/contracts/types/BalanceDelta.sol";
+import {BaseHook} from "../../lib/v4-periphery/src/base/hooks/BaseHook.sol";
+import {IPoolManager} from "../../lib/v4-core/src/interfaces/IPoolManager.sol";
+import {PoolKey} from "../../lib/v4-core/src/types/PoolKey.sol";
+import {BalanceDelta} from "../../lib/v4-core/src/types/BalanceDelta.sol";
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract YieldOptimizerHook is BaseHook {
