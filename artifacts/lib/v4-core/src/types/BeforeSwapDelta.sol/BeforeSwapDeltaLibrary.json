@@ -1,0 +1,24 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BeforeSwapDeltaLibrary",
+  "sourceName": "lib/v4-core/src/types/BeforeSwapDelta.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ZERO_DELTA",
+      "outputs": [
+        {
+          "internalType": "BeforeSwapDelta",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608080604052346018576075908161001e823930815050f35b600080fdfe6080806040526004361015601257600080fd5b60003560e01c6391cb466914602657600080fd5b6000366003190112603a5780600060209252f35b600080fdfea26469706673582212205d9d64e46385a83e63bac37b4ed6fa67c5202ce9f510eb685a132d70bc9db64464736f6c63430008180033",
+  "deployedBytecode": "0x6080806040526004361015601257600080fd5b60003560e01c6391cb466914602657600080fd5b6000366003190112603a5780600060209252f35b600080fdfea26469706673582212205d9d64e46385a83e63bac37b4ed6fa67c5202ce9f510eb685a132d70bc9db64464736f6c63430008180033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
