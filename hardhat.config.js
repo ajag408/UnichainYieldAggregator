@@ -36,11 +36,22 @@ module.exports = {
       },
     ],
   },
+  mocha: {
+    timeout: 100000, // 100 seconds
+  },
   networks: {
     unichainSepolia: {
       url: "https://sepolia.unichain.org",
       accounts: [process.env.PRIVATE_KEY],
       chainId: 1301,
+      timeout: 60000,
+      confirmations: 1,
+    },
+    hardhat: {
+      forking: {
+        url: "https://sepolia.unichain.org",
+        blockNumber: 4780685,
+      },
     },
   },
   paths: {
@@ -48,11 +59,6 @@ module.exports = {
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts",
-    // libs: ["./lib"],
-    // libraries: {
-    //   "lib/v4-core/contracts": ["contracts"],
-    //   "lib/v4-periphery/contracts": ["contracts"],
-    // },
   },
   preprocess: {
     eachLine: (hre) => ({
@@ -68,24 +74,19 @@ module.exports = {
       },
     }),
   },
-  // Add path remappings
-  //   overrides: {
-  //     "@uniswap/v4-core/": {
-  //       path: "./lib/v4-core",
-  //     },
-  //     "@uniswap/v4-periphery/": {
-  //       path: "./lib/v4-periphery",
-  //     },
-  //   },
-  //   // Add custom external source files
-  //   external: {
-  //     contracts: [
-  //       {
-  //         artifacts: "lib/v4-core/out",
-  //       },
-  //       {
-  //         artifacts: "lib/v4-periphery/out",
-  //       },
-  //     ],
-  //   },
+  // Add external sources to be compiled
+  external: {
+    contracts: [
+      {
+        artifacts: "node_modules/@uniswap/v4-core/artifacts",
+        deploy: "node_modules/@uniswap/v4-core/deploy",
+      },
+    ],
+    deployments: {
+      unichainSepolia: {
+        PoolManager: ["0xC81462Fec8B23319F288047f8A03A57682a35C1A"],
+        PoolSwapTest: ["0xe437355299114d35ffcbc0c39e163b24a8e9cbf1"],
+      },
+    },
+  },
 };

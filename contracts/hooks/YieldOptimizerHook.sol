@@ -3,6 +3,7 @@ pragma solidity ^0.8.24;
 
 import {BaseHook} from "@uniswap/v4-periphery/src/base/hooks/BaseHook.sol";
 import {IPoolManager} from "@uniswap/v4-core/src/interfaces/IPoolManager.sol";
+// import {PoolSwapTest} from "@uniswap/v4-core/src/test/PoolSwapTest.sol";
 import {Hooks} from "@uniswap/v4-core/src/libraries/Hooks.sol";
 import {BeforeSwapDelta, toBeforeSwapDelta} from "@uniswap/v4-core/src/types/BeforeSwapDelta.sol";
 
@@ -32,7 +33,8 @@ contract YieldOptimizerHook is BaseHook {
         uint256 gasSaved
     );
 
-    constructor(IPoolManager _poolManager) BaseHook(_poolManager) {}
+    constructor(IPoolManager _poolManager) BaseHook(_poolManager) {
+    }
 
     // User deposit/withdraw functions
     function deposit(address token, uint256 amount) external {
