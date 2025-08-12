@@ -2,7 +2,7 @@
 
 ## Overview
 
-A Uniswap v4 hook implementation that optimizes yield across liquidity pools by tracking deposits, calculating yields, and automatically rebalancing positions based on performance metrics.
+A Uniswap v4 hook implementation that optimizes yield across liquidity pools by tracking deposits, calculating yields, and automatically rebalancing positions based off performance metrics.
 
 ## Architecture
 
